@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9e9e9"
+    tools:context=".View.ViewProfileActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.ViewProfileActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/userImageViewStroke"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_circle_stroke_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circ_img" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/workshopName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="منجرة السلام"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/userImageViewStroke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="128dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/workshopName"
+        app:layout_constraintStart_toStartOf="@id/userNameTextView"
+        app:layout_constraintEnd_toEndOf="@id/userNameTextView"/>
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="الاسم الأول والاخير"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/lineView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/white"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="0dp"
+        app:contentPaddingBottom="24dp"
+        app:contentPaddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTextView">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bioTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="150"
+            android:textAlignment="center"
+            tools:text="لأعمال الخشبية, ابواب خشب داخلية وخارجية, مطابخ, خزائن حائط, مظلات خشب" />
+
+    </com.google.android.material.card.MaterialCardView>
+    <Button
+        android:id="@+id/chatMaterialButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="@string/chatTwo"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/colorGrayButton"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/materialCardView"
+        app:layout_constraintEnd_toStartOf="@id/directServiceMaterialButton"
+        app:layout_constraintStart_toStartOf="@id/materialCardView"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView" />
+
+    <Button
+        android:id="@+id/directServiceMaterialButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="@string/direct_service"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/colorGrayButton"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/materialCardView"
+        app:layout_constraintEnd_toEndOf="@id/materialCardView"
+        app:layout_constraintStart_toEndOf="@id/chatMaterialButton"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialCardView">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="57dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الأسم"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="textStart"
+                        android:textSize="8sp"
+                        tools:text="منجرة السلام" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="اسم المالك"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/ownerNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="textStart"
+                        android:textSize="8sp"
+                        tools:text="الاسم الاول والاخير" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="الموقع"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/locationTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="8sp"
+                        tools:text="الشميساني,اشارات وادي صقرة, خلف المستشفى التخصصي" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="معلومات التواصل "
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/phoneTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/phone"
+                        android:drawablePadding="8dp"
+                        android:tag="phoneTextView"
+                        android:textAlignment="textStart"
+                        android:textSize="12sp"
+                        tools:text="call (06) 555 5555" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/whatsAppTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/whatsapp"
+                        android:drawablePadding="8dp"
+                        android:tag="whatsAppTextView"
+                        android:textAlignment="viewStart"
+                        android:textSize="12sp"
+                        tools:text="Whatsapp 0790000000" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/facebookTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/facebook"
+                        android:drawablePadding="8dp"
+                        android:tag="facebookTextView"
+                        android:textAlignment="viewStart"
+                        android:textSize="12sp"
+                        tools:text="facebook/AssalamJordan" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/instagramTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/instagram"
+                        android:drawablePadding="8dp"
+                        android:tag="instagramTextView"
+                        android:textAlignment="viewStart"
+                        android:textSize="12sp"
+                        tools:text="Instagram/AssalamJordan" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/emailTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/mail"
+                        android:drawablePadding="8dp"
+                        android:tag="emailTextView"
+                        android:textAlignment="viewStart"
+                        android:textSize="12sp"
+                        tools:text="info@assalamjo.com" />
+
+                    <android.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

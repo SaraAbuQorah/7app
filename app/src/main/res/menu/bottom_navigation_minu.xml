@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/selector_home"
+        android:title="@string/home"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/selector_chat"
+        android:title="@string/chat"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/space"
+        android:title=""
+        app:showAsAction="always"
+        android:enabled="false"
+        />
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/selector_notifications"
+        android:title="@string/notifications"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/myAccount"
+        android:icon="@drawable/selector_my_account"
+        android:title="@string/my_account"
+        app:showAsAction="always"
+        />
+
+</menu>
